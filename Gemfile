@@ -15,11 +15,10 @@ gem 'rails_12factor', group: :production
 # Use haml-rails for HTML abstraction markup language
 gem "haml-rails"
 
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
-
-# Bootstrap-sass for bootstrap
-gem 'bootstrap-sass'
+# Use less-rails-bootstrap for css framework
+gem 'therubyracer'  # If using Ruby
+gem 'jquery-rails'  # If using Bootstrap's JS plugins.
+gem 'less-rails-bootstrap'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
