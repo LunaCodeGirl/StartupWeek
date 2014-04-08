@@ -4,10 +4,22 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.2'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'sqlite3', group: :development
+
+# Use postgres for Heroku deployment
+gem 'pg', group: :production
+
+# Heroku requirement
+gem 'rails_12factor', group: :production
+
+# Use haml-rails for HTML abstraction markup language
+gem "haml-rails"
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
+
+# Bootstrap-sass for bootstrap
+gem 'bootstrap-sass'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -30,6 +42,21 @@ gem 'jbuilder', '~> 1.2'
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
+end
+
+
+group :development, :test do
+  gem 'pry'
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'awesome_print'
+  gem 'hirb'
+  gem 'pry-stack_explorer'
+  gem 'coolline'
+  gem 'rspec-rails'
+  gem 'debugger'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 # Use ActiveModel has_secure_password
