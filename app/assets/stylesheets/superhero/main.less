@@ -1,0 +1,81 @@
+@import "variables.less";
+
+
+body
+{
+  background-image: image-url('bg.jpg');
+  background-size: cover;
+  background-attachment: fixed; 
+  margin-top: 60px;
+}
+
+
+#home-sections
+{
+  
+  #home
+  {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    background:#fff;
+
+    #down-arrow
+    {
+      a
+      {
+        color: @gray-dark;
+        font-size: 4em;
+
+        &:hover
+        {
+          text-decoration: none;
+          color: @brand-primary;
+        }
+      }
+    }
+  }
+
+  #events
+  {
+    h3
+    {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .list-group-item
+    {
+      border-bottom: 2px solid @gray-darker;
+
+      &:last-child
+      {
+        border-bottom: none;
+      }
+    }
+
+    .rsvp-button
+    {
+      width:100%;
+      padding:5px;
+      margin-top: 5px;
+    }
+
+    .time-box
+    {
+      float: right;
+
+      strong
+      {
+        display: inline-block;
+        text-align: right;
+      }
+
+      button
+      {
+        padding:5px;
+        margin-left: 5px;
+        margin-top: 2px;
+      }
+    }
+  }
+}

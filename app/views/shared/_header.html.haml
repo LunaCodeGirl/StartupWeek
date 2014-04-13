@@ -5,13 +5,13 @@
         %span.sr-only Toggle Navigation
         - 3.times do
           %span.icon-bar
-      = link_to(image_tag('logo-small.png'), root_path)
+      = link_to(image_tag('logo-small.png'), root_path(anchor:''))
 
     .collapse.navbar-collapse#nav-collapse-target
       %ul.nav.navbar-nav.navbar-right
         %li
-          = link_to "Events", '#events'
+          = link_to "Events", root_path(anchor:'events')
         %li
-          = link_to "Sponsorship", '#sponsorship'
+          = link_to "Sponsorship", root_path(anchor:'sponsorship')
         %li
-          = link_to "About", '#about'
+          = link_to "About", root_path(anchor:'about')

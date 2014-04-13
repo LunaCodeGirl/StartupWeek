@@ -15,3 +15,50 @@
 //= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
+
+
+function setupSections ()
+{
+    $windowHeight = $(window).height();
+
+    $('body').data('offset', $windowHeight / 2.0);
+
+    $("#home-sections section").each(function()
+    {
+        $thisHeight = $(this).height();
+
+        if ($thisHeight < $windowHeight)
+        {
+            $halfDiff = ($windowHeight - $thisHeight) / 2.0;
+
+            $(this).css('margin-top', $halfDiff).css('margin-bottom', $halfDiff);
+        };
+    });
+};
+
+
+$( document ).on('page:load', setupSections());
+
+$( window ).resize(function(){setupSections();});
+
+$( document ).ready(function()
+{
+    setupSections();
+
+    $('a[href*="#"]').on('click',function (e)
+    {
+            e.preventDefault();
+
+            var target = this.hash,
+            $target = $(target);
+
+            $newScrollPos = (this.hash === '') ? 0 : $target.offset().top - parseInt($target.css('margin-top'));
+
+            $('html, body').stop().animate({
+                'scrollTop': $newScrollPos
+            }, 900, 'swing', function () {
+                window.location.hash = target;
+            });
+    });
+
+});

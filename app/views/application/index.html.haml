@@ -1,27 +1,33 @@
 #home-sections
 
-  %section#home
-    .container
-      %h1.text-center
-        April 21<sup>st</sup> - April 25<sup>th</sup>, 2014
+  .container-fluid
+    %section.row#home
+      .container
+        .row
+          %h1.text-center.page-header
+            April 21<sup>st</sup> - April 25<sup>th</sup>, 2014
+          .col-xs-12.col-sm-6.col-sm-offset-3
+            %p.text-justified.lead
+              Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus.
 
-  %section#events
-    .jumbotron
-      %h1 Jumbotron
-      %p This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
-      %p
-        %a.btn.btn-primary.btn-lg Learn more
+        .row#down-arrow
+          = link_to '#events' do
+            %span.glyphicon.glyphicon-circle-arrow-down.center-block.text-center
 
-  %section#sponsorhip
-    .jumbotron
-      %h1 Jumbotron
-      %p This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
-      %p
-        %a.btn.btn-primary.btn-lg Learn more
 
-  %section#about
-    .jumbotron
-      %h1 Jumbotron
-      %p This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
-      %p
-        %a.btn.btn-primary.btn-lg Learn more
+  .container
+    = render 'events'
+    
+    %section.row#sponsorship
+      .jumbotron
+        %h1 Jumbotron
+        %p This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
+        %p
+          %a.btn.btn-primary.btn-lg Learn more
+    
+    %section.row#about
+      .jumbotron
+        %h1 Jumbotron
+        %p This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
+        %p
+          %a.btn.btn-primary.btn-lg Learn more
