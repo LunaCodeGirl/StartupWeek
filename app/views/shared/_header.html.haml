@@ -6,3 +6,12 @@
         - 3.times do
           %span.icon-bar
       = link_to(image_tag('logo-small.png'), root_path)
+
+    .collapse.navbar-collapse#nav-collapse-target
+      %ul.nav.navbar-nav.navbar-right
+        %li
+          = link_to "Events", '#events'
+        %li
+          = link_to "Sponsorship", '#sponsorship'
+        %li
+          = link_to "About", '#about'
