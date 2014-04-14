@@ -15,6 +15,10 @@ gem 'rails_12factor', group: :production
 # Use haml-rails for HTML abstraction markup language
 gem "haml-rails"
 
+# Use activeadmin for admin interface
+gem 'activeadmin', github: 'gregbell/active_admin'
+
+
 # Use less-rails-bootstrap for css framework
 gem 'therubyracer'  # If using Ruby
 gem 'jquery-rails'  # If using Bootstrap's JS plugins.
