@@ -4,5 +4,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def index
+    @mon_events = Event.where(date:'2014-04-21')
+    @tue_events = Event.where(date:'2014-04-22')
+    @wed_events = Event.where(date:'2014-04-23')
   end
 end

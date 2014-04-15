@@ -7,41 +7,7 @@
           %span.pull-right 21<sup>st</sup>
       .panel-body
         %ul.list-group
-          %li.list-group-item
-            .row
-              .col-xs-7
-                %h3 First Item
-                %button.btn.btn-success.btn-lg.rsvp-button
-                  RSVP
-              .col-xs-5
-                .row.time-box
-                  %strong Start: 
-                  %button.btn.btn-default.btn-md
-                    %span.glyphicon.glyphicon-time
-                    7:00pm
-                .row.time-box
-                  %strong End: 
-                  %button.btn.btn-default.btn-md
-                    %span.glyphicon.glyphicon-time
-                    8:00pm
-          
-          %li.list-group-item
-            .row
-              .col-xs-7
-                %h3 Second Item
-                %button.btn.btn-success.btn-lg.rsvp-button
-                  RSVP
-              .col-xs-5
-                .row.time-box
-                  %strong Start: 
-                  %button.btn.btn-default.btn-md
-                    %span.glyphicon.glyphicon-time
-                    7:00pm
-                .row.time-box
-                  %strong End: 
-                  %button.btn.btn-default.btn-md
-                    %span.glyphicon.glyphicon-time
-                    8:00pm
+          = render @mon_events
 
 
   .col-xs-12.col-sm-4

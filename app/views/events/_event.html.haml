@@ -1,0 +1,20 @@
+%li.list-group-item
+  .row
+    .col-xs-7
+      / - require 'pry'
+      / - binding.pry
+      %h3
+        = event.name
+      
+      = link_to 'RSVP', event.rsvp, class: ['btn', 'btn-success', 'btn-lg', 'rsvp-button']
+    .col-xs-5
+      .row.time-box
+        %strong Start: 
+        %button.btn.btn-default.btn-md
+          %span.glyphicon.glyphicon-time
+            = event.start.strftime("%I:%M%p")
+      .row.time-box
+        %strong End: 
+        %button.btn.btn-default.btn-md
+          %span.glyphicon.glyphicon-time
+            = event.end.strftime("%I:%M%p")

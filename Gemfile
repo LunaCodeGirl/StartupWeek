@@ -17,7 +17,7 @@ gem "haml-rails"
 
 # Use activeadmin for admin interface
 gem 'activeadmin', github: 'gregbell/active_admin'
-
+gem "sass-rails", "4.0.2"
 
 # Use less-rails-bootstrap for css framework
 gem 'therubyracer'  # If using Ruby
@@ -35,6 +35,7 @@ gem 'coffee-rails', '~> 4.0.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+gem "jquery-ui-rails"
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
