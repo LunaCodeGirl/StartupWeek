@@ -1,99 +1,52 @@
-%section.row#events
-  .col-xs-12.col-sm-4
-    .day.panel.panel-primary
-      .panel-heading
-        %h3 
-          Monday
-          %span.pull-right 21<sup>st</sup>
-      .panel-body
-        %ul.list-group
-          = render @mon_events
+%section#events
+  .row
+    .col-xs-12.col-sm-4
+      .day.panel.panel-primary
+        .panel-heading
+          %h2 
+            Monday
+            %span.pull-right 21<sup>st</sup>
+        .panel-body
+          %ul.list-group
+            = render @mon_events
+    
+    .col-xs-12.col-sm-4
+      .day.panel.panel-primary
+        .panel-heading
+          %h2 
+            Tuesday
+            %span.pull-right 22<sup>nd</sup>
+        .panel-body
+          %ul.list-group
+            = render @tue_events
 
+    .col-xs-12.col-sm-4
+      .day.panel.panel-primary
+        .panel-heading
+          %h2 
+            Wednesday
+            %span.pull-right 23<sup>rd</sup>
+        .panel-body
+          %ul.list-group
+            = render @wed_events
 
-  .col-xs-12.col-sm-4
-    .day.panel.panel-primary
-      .panel-heading
-        %h3 
-          Tuesday
-          %span.pull-right 22<sup>nd</sup>
-      .panel-body
-        %ul.list-group
-          %li.list-group-item
-            .row
-              .col-xs-7
-                %h3 First Item
-                %button.btn.btn-success.btn-lg.rsvp-button
-                  RSVP
-              .col-xs-5
-                .row.time-box
-                  %strong Start: 
-                  %button.btn.btn-default.btn-md
-                    %span.glyphicon.glyphicon-time
-                    7:00pm
-                .row.time-box
-                  %strong End: 
-                  %button.btn.btn-default.btn-md
-                    %span.glyphicon.glyphicon-time
-                    8:00pm
-          
-          %li.list-group-item
-            .row
-              .col-xs-7
-                %h3 Second Item
-                %button.btn.btn-success.btn-lg.rsvp-button
-                  RSVP
-              .col-xs-5
-                .row.time-box
-                  %strong Start: 
-                  %button.btn.btn-default.btn-md
-                    %span.glyphicon.glyphicon-time
-                    7:00pm
-                .row.time-box
-                  %strong End: 
-                  %button.btn.btn-default.btn-md
-                    %span.glyphicon.glyphicon-time
-                    8:00pm
+  .row
+    .col-xs-12.col-sm-4.col-sm-offset-2
+      .day.panel.panel-primary
+        .panel-heading
+          %h2 
+            Thursday
+            %span.pull-right 24<sup>th</sup>
+        .panel-body
+          %ul.list-group
+            = render @thu_events
 
-  .col-xs-12.col-sm-4
-    .day.panel.panel-primary
-      .panel-heading
-        %h3 
-          Wednesday
-          %span.pull-right 23<sup>rd</sup>
-      .panel-body
-        %ul.list-group
-          %li.list-group-item
-            .row
-              .col-xs-7
-                %h3 First Item
-                %button.btn.btn-success.btn-lg.rsvp-button
-                  RSVP
-              .col-xs-5
-                .row.time-box
-                  %strong Start: 
-                  %button.btn.btn-default.btn-md
-                    %span.glyphicon.glyphicon-time
-                    7:00pm
-                .row.time-box
-                  %strong End: 
-                  %button.btn.btn-default.btn-md
-                    %span.glyphicon.glyphicon-time
-                    8:00pm
-          
-          %li.list-group-item
-            .row
-              .col-xs-7
-                %h3 Second Item
-                %button.btn.btn-success.btn-lg.rsvp-button
-                  RSVP
-              .col-xs-5
-                .row.time-box
-                  %strong Start: 
-                  %button.btn.btn-default.btn-md
-                    %span.glyphicon.glyphicon-time
-                    7:00pm
-                .row.time-box
-                  %strong End: 
-                  %button.btn.btn-default.btn-md
-                    %span.glyphicon.glyphicon-time
-                    8:00pm
+    .col-xs-12.col-sm-4
+      .day.panel.panel-primary
+        .panel-heading
+          %h2 
+            Friday
+            %span.pull-right 25<sup>th</sup>
+        .panel-body
+          %ul.list-group
+            = render @fri_events
