@@ -4,10 +4,32 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.2'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'sqlite3', group: :development
 
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
+# Use postgres for Heroku deployment
+gem 'pg', group: :production
+
+# Heroku requirement
+gem 'rails_12factor', group: :production
+
+# Use haml-rails for HTML abstraction markup language
+gem "haml-rails"
+
+# Lets use maruku for beautiful content
+gem 'rdiscount'
+
+# Use activeadmin for admin interface
+gem 'activeadmin', github: 'gregbell/active_admin'
+gem "sass-rails", "4.0.2"
+
+# Use less-rails-bootstrap for css framework
+gem 'therubyracer'  # If using Ruby
+
+# twitter bootstrap css & javascript toolkit
+gem 'twitter-bootswatch-rails', '~> 3.1.1'
+
+# twitter bootstrap helpers gem, e.g., alerts etc...
+gem 'twitter-bootswatch-rails-helpers'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -20,6 +42,10 @@ gem 'coffee-rails', '~> 4.0.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+gem "jquery-ui-rails"
+
+# For validating URLs in models
+gem 'validate_url'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
@@ -30,6 +56,21 @@ gem 'jbuilder', '~> 1.2'
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
+end
+
+
+group :development, :test do
+  gem 'pry'
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'awesome_print'
+  gem 'hirb'
+  gem 'pry-stack_explorer'
+  gem 'coolline'
+  gem 'rspec-rails'
+  gem 'debugger'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 # Use ActiveModel has_secure_password

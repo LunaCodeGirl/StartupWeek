@@ -1,0 +1,48 @@
+%section.row.well#about
+  %h1.text-center.page-header
+    About
+
+  .row
+    .col-xs-12.col-sm-8.col-sm-offset-2
+      .text-justified.lead
+        :markdown
+          The [University of Colorado at Boulder](http://www.colorado.edu/) has a strong history of entrepreneurship. Movers and shakers from [Silicon Flatirons](http://www.silicon-flatirons.org/), [Deming Centre](http://deming.colorado.edu/) for Entrepreneurship, and [ATLAS Institute and Engineer Entrepreneurship](http://atlas.colorado.edu/) program have done an outstanding job to keep our entrepreneurship spirit moving forward.
+
+          In order to expand and carry on that spirit, [InnovateCU](http://innovatecu.com) was founded in 2013 with a mission to make CU Boulder a leader in software innovation. We aim to equip our students with necessary technical skills and empower them to make a meaningful impact on their community with their passion
+
+  %hr
+
+  .row
+    %h3.text-center.col-sm-12
+      Who's Involved
+  
+  .row
+    .col-xs-12.col-sm-3.col-sm-offset-3
+      .person
+        = image_tag 'danny.jpg', class: 'img-circle center-block'
+        %h3.text-center DANNY TRAN
+        %h5.text-center Event Organizer
+
+        .row
+          .col-sm-3.col-sm-offset-3
+            = link_to('https://twitter.com/duyqtran') do
+              = image_tag('twitter.png', size: '32x32', class: 'center-block')
+
+          .col-sm-3
+            = link_to('https://www.linkedin.com/in/dqtran') do
+              = image_tag('linkedin.jpg', size: '32x32', class: 'center-block')
+
+    .col-xs-12.col-sm-3
+      .person
+        = image_tag 'spencer.jpg', class: 'img-circle center-block'
+        %h3.text-center SPENCER COMERFORD
+        %h5.text-center Website Developer
+
+        .row
+          .col-sm-3.col-sm-offset-3
+            = link_to('https://twitter.com/spencevail') do
+              = image_tag('twitter.png', size: '32x32', class: 'center-block')
+
+          .col-sm-3
+            = link_to('http://www.linkedin.com/pub/spencer-comerford/8/393/31b/') do
+              = image_tag('linkedin.jpg', size: '32x32', class: 'center-block')

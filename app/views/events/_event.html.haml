@@ -1,0 +1,31 @@
+%li.list-group-item
+  .row
+    .col-xs-12
+      / - require 'pry'
+      / - binding.pry
+      %h2
+        = event.title
+
+      %p.lead
+        = event.subtitle.upcase
+
+  .row
+    .col-xs-6
+      .row.time-box
+        .col-sm-12
+          %strong Start:
+          %button.btn.btn-success.btn-md
+            %span.glyphicon.glyphicon-time
+            = event.start.strftime("%l:%M%p")
+
+    .col-xs-6
+      .row.time-box
+        .col-sm-12
+          %strong End:
+          %button.btn.btn-danger.btn-md
+            %span.glyphicon.glyphicon-time
+            = event.end.strftime("%l:%M%p")
+
+  .row
+    .col-sm-12
+      = link_to 'RSVP', event.rsvp, class: ['btn', 'btn-info', 'btn-lg', 'rsvp-button']

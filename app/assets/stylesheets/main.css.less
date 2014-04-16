@@ -1,0 +1,179 @@
+@import "superhero/variables";
+@import "superhero/loader";
+@import "superhero/bootswatch";
+
+// Overwrite variables here
+@navbar-height:          60px;
+@navbar-default-color:   @gray-light;
+@navbar-default-bg:      #fff;
+@text-color:             @gray-darker;
+
+
+body
+{
+  background-image: image-url('bg.jpg');
+  background-size: cover;
+  background-attachment: fixed; 
+  margin-top: 60px;
+}
+
+
+nav
+{
+  #logo
+  {
+    margin-top: 5px;
+  }
+
+  li
+  {
+    a
+    {
+      font-size: 1.4em;
+    }
+  }
+}
+
+
+#home-sections
+{
+  
+  #home
+  {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    // background:#fff;
+
+    #down-arrow
+    {
+      a
+      {
+        // color: @gray-dark;
+        font-size: 4em;
+        text-decoration: none;
+
+        &:hover
+        {
+          text-decoration: none;
+          color: @brand-primary;
+        }
+      }
+    }
+  }
+
+  #events
+  {
+    .panel
+    {
+      background-color: transparent;
+
+      h2
+      {
+        margin-top: 10px;
+        margin-bottom: 0;
+      }
+
+      .panel-body
+      {
+        padding: 0;
+
+        .list-group
+        {
+          margin-bottom: 0;
+
+          .list-group-item
+          {
+            border-bottom: 1px solid @gray-lighter;
+            margin-top: 5px;
+            margin-bottom: 0px;
+
+            &:last-child
+            {
+              border-bottom: none;
+            }
+
+            h2
+            {
+              margin-top: 0;
+            }
+
+            .lead
+            {
+              color: @gray-light;
+              font-size: 18px;
+              text-align: justify;
+            }
+
+            .time-box
+            {
+
+              strong
+              {
+                display: inline-block;
+                text-align: right;
+                font-size: 14px;
+                line-height: 1.42857143;
+                // padding: 5px;
+                vertical-align: middle;
+                margin-top: 2px;
+              }
+
+              button
+              {
+                padding:5px;
+                // margin-left: 5px;
+                // margin-top: 2px;
+                font-size: 14px;
+
+                &:hover
+                {
+                  cursor: default;
+
+                  &.btn-success
+                  {
+                    background-color: @brand-success;
+                  }
+
+                  &.btn-danger
+                  {
+                    background-color: @brand-danger;
+                  }
+                }
+              }
+            }
+
+            .rsvp-button
+            {
+              width:100%;
+              padding:5px;
+              margin-top: 15px;
+              color: white;
+              text-decoration: none;
+            }
+          }
+
+          }//End .list-group-item
+        }//End .list-group
+    }
+  }//End #events
+}
+
+
+.tctooltip
+{
+  // .label;
+  // .label-warning;
+  .alert;
+  .alert-warning;
+  .h3;
+  // background-color: @brand-warning;
+  // padding: 5px;
+  font-size: 2em;
+  color: white;
+}
+
+
+.text-justified > p
+{
+  text-align: justify;
+}
