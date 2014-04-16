@@ -1,30 +1,31 @@
 %li.list-group-item
   .row
-    .col-sm-7.col-xs-12
+    .col-xs-12
       / - require 'pry'
       / - binding.pry
       %h2
         = event.title
 
       %p.lead
-        = event.subtitle
-
-    .col-sm-5.col-xs-12
-      .row.time-box
-        .col-sm-4
-          %strong Start: 
-        .col-sm-8
-          %button.btn.btn-default.btn-md
-            %span.glyphicon.glyphicon-time
-              = event.start.strftime("%I:%M%p")
-
-      .row.time-box
-        .col-sm-4
-          %strong End:
-        .col-sm-8
-          %button.btn.btn-default.btn-md
-            %span.glyphicon.glyphicon-time
-              = event.end.strftime("%I:%M%p")
+        = event.subtitle.upcase
 
   .row
-    = link_to 'RSVP', event.rsvp, class: ['btn', 'btn-success', 'btn-lg', 'rsvp-button']
+    .col-xs-6
+      .row.time-box
+        .col-sm-12
+          %strong Start:
+          %button.btn.btn-success.btn-md
+            %span.glyphicon.glyphicon-time
+            = event.start.strftime("%l:%M%p")
+
+    .col-xs-6
+      .row.time-box
+        .col-sm-12
+          %strong End:
+          %button.btn.btn-danger.btn-md
+            %span.glyphicon.glyphicon-time
+            = event.end.strftime("%l:%M%p")
+
+  .row
+    .col-sm-12
+      = link_to 'RSVP', event.rsvp, class: ['btn', 'btn-success', 'btn-lg', 'rsvp-button']

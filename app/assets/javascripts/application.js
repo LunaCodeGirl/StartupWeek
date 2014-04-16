@@ -32,7 +32,11 @@ function setupSections ()
             $halfDiff = ($windowHeight - $thisHeight) / 2.0;
 
             $(this).css('margin-top', $halfDiff).css('margin-bottom', $halfDiff);
-        };
+        }
+        else
+        {
+            $(this).css('margin-top', '80px');
+        }
     });
 };
 
@@ -59,6 +63,22 @@ $( document ).ready(function()
             }, 900, 'swing', function () {
                 window.location.hash = target;
             });
+    });
+
+
+    et = $('#events').offset().top;
+    wh = $(window).height();
+
+    scrollPos = (et - wh);
+
+
+    $(window).scroll(function()
+    {
+        var st = $(window).scrollTop();
+        
+        if(st < scrollPos)
+            $('li.active').removeClass('active');
+
     });
 
 });
