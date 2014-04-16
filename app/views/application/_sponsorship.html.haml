@@ -1,0 +1,10 @@
+%section.row.well#sponsorship
+  %h1.text-center
+    Sponsors
+  
+  #sponsorcloud
+    %canvas#sponsorcloudcanvas{:width => 500, :height => 500 }
+      - @sponsors.each do |s|
+        %li
+          = link_to(s.url, title: s.name) do
+            = image_tag(s.logo_url)

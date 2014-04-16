@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require superhero/loader
 //= require superhero/bootswatch
+//= require jquery.tagcanvas
 
 
 
@@ -80,5 +81,35 @@ $( document ).ready(function()
             $('li.active').removeClass('active');
 
     });
+
+
+
+    $width = $('#sponsorcloudcanvas').parent().width();
+    $('#sponsorcloudcanvas').attr('width', $width).attr('height', $width / 2.0);
+
+
+    $sponsorcloud = $('#sponsorcloudcanvas').tagcanvas(
+    {
+        textColour : '#ccc',
+        outlineMethod: 'block',
+        outlineColour: '#2B3E50',
+        outlineThickness : 1,
+        maxSpeed : 0.05,
+        depth : 1.0,
+        initial : [0.5, 0.5],
+        wheelZoom : false,
+        tooltip : 'div',
+        freezeDecel : true,
+        // freezeActive : true,
+        tooltipDelay : 0,
+        minBrightness : 0.5,
+        decel : 1.0,
+        radiusX : 0.8,
+        radiusY : 0.8,
+        radiusZ : 0.8
+    });
+
+    if( !$sponsorcloud )
+        $('#sponsorcloud').hide();   
 
 });
