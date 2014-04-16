@@ -28,7 +28,7 @@ ActiveAdmin.register Event do
     f.inputs "Event Details" do
       f.input :title
       f.input :subtitle
-      f.input :date, :as => :select, :collection => { 'Monday' => '2014-04-21', 'Tuesday' => '2014-04-22', 'Wednesday' => '2014-04-23'}
+      f.input :date, :as => :select, :collection => { 'Monday' => '2014-04-21', 'Tuesday' => '2014-04-22', 'Wednesday' => '2014-04-23', 'Thursday' => '2014-04-24', 'Friday' => '2014-04-25'}
       f.input :start, :as => :time, :minute_step => 15
       f.input :end, :as => :time, :minute_step => 15
       f.input :rsvp, :as => :url
