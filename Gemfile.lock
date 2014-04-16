@@ -175,6 +175,7 @@ GEM
       activesupport (>= 3.0)
       i18n
       polyamorous (~> 1.0.0)
+    rdiscount (2.1.7.1)
     rdoc (4.1.1)
       json (~> 1.4)
     ref (1.0.5)
@@ -261,6 +262,7 @@ DEPENDENCIES
   pry-stack_explorer
   rails (= 4.0.2)
   rails_12factor
+  rdiscount
   rspec-rails
   sass-rails (= 4.0.2)
   sdoc

@@ -7,8 +7,9 @@
           %h1.text-center.page-header
             April 21<sup>st</sup> - April 25<sup>th</sup>, 2014
           .col-xs-12.col-sm-6.col-sm-offset-3
-            %p.text-justified.lead
-              This is the first year we organize CU Startup Week. Our goal is to connect entrepreneur students from across CU Boulder campus and community members together for a week full of events to showcase our entrepreneurial spirit, explore, educate, discuss and drive our spirit forward. Follow us on Twitter and Facebook for more updates.
+            .text-justified.lead
+              :markdown
+                This is the first year [InnovateCU](http://innovatecu.com) has organized CU Startup Week. Our goal is to bring entrepreneurial students from across [CU Boulder](http://www.colorado.edu/) campus and community members during a week full of events that showcase our entrepreneurial spirit. We will explore, educate, discuss and drive that spirit forward at this year's CU Startup Week! Follow us on [Twitter](https://twitter.com/custartupweek) and [Facebook](https://www.facebook.com/custartupweek) for more updates.
 
         .row#down-arrow
           = link_to '#events' do
@@ -20,9 +21,4 @@
     
     = render 'sponsorship'
     
-    %section.row#about
-      .jumbotron
-        %h1 Jumbotron
-        %p This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
-        %p
-          %a.btn.btn-primary.btn-lg Learn more
+    = render 'about'
