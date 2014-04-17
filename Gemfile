@@ -71,8 +71,9 @@ group :development, :test do
   gem 'debugger'
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'google-analytics-rails'
 end
+
+gem 'google-analytics-rails', group: :production
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
