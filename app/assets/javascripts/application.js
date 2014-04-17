@@ -88,15 +88,15 @@ $( document ).ready(function()
     $('#partnercloudcanvas').attr('width', $width).attr('height', $width / 2.0);
 
 
-    $partnercloud = $('#partnercloudcanvas').tagcanvas(
+    $options =
     {
         textColour : '#ccc',
         outlineMethod: 'block',
         outlineColour: '#2B3E50',
         outlineThickness : 1,
-        maxSpeed : 0.05,
+        maxSpeed : 0.02,
         depth : 1.0,
-        initial : [0.5, 0.5],
+        initial : [Math.random() / 2.0, Math.random() / 2.0],
         wheelZoom : false,
         tooltip : 'div',
         freezeDecel : true,
@@ -104,10 +104,12 @@ $( document ).ready(function()
         tooltipDelay : 0,
         minBrightness : 0.5,
         decel : 1.0,
-        radiusX : 0.8,
-        radiusY : 0.8,
-        radiusZ : 0.8
-    });
+        // radiusX : 0.8,
+        // radiusY : 0.8,
+        // radiusZ : 0.8
+    }
+
+    $partnercloud = $('#partnercloudcanvas').tagcanvas($options);
 
     if( !$partnercloud )
         $('#partnercloud').hide();   
