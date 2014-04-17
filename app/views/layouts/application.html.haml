@@ -13,6 +13,8 @@
     = stylesheet_link_tag "application", :media => "all", "data-turbolinks-track" => true
     = yield(:page_stylesheet) if content_for?(:page_stylesheet)
 
+    = analytics_init if Rails.env.production?
+
   %body{:data => {:spy => "scroll", :target => "#nav-collapse-target"}}
   
     = render 'shared/header'

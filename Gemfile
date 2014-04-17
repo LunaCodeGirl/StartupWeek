@@ -71,6 +71,7 @@ group :development, :test do
   gem 'debugger'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'google-analytics-rails'
 end
 
 # Use ActiveModel has_secure_password
