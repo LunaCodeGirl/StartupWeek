@@ -1,4 +1,4 @@
-ActiveAdmin.register Sponsor do
+ActiveAdmin.register Partner do
 
   
   # See permitted parameters documentation:

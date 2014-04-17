@@ -84,11 +84,11 @@ $( document ).ready(function()
 
 
 
-    $width = $('#sponsorcloudcanvas').parent().width();
-    $('#sponsorcloudcanvas').attr('width', $width).attr('height', $width / 2.0);
+    $width = $('#partnercloudcanvas').parent().width();
+    $('#partnercloudcanvas').attr('width', $width).attr('height', $width / 2.0);
 
 
-    $sponsorcloud = $('#sponsorcloudcanvas').tagcanvas(
+    $partnercloud = $('#partnercloudcanvas').tagcanvas(
     {
         textColour : '#ccc',
         outlineMethod: 'block',
@@ -109,7 +109,7 @@ $( document ).ready(function()
         radiusZ : 0.8
     });
 
-    if( !$sponsorcloud )
-        $('#sponsorcloud').hide();   
+    if( !$partnercloud )
+        $('#partnercloud').hide();   
 
 });

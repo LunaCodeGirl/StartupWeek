@@ -10,6 +10,6 @@ class ApplicationController < ActionController::Base
     @thu_events = Event.where(date:'2014-04-24')
     @fri_events = Event.where(date:'2014-04-25')
 
-    @sponsors = Sponsor.all
+    @partners = Partner.all
   end
 end
