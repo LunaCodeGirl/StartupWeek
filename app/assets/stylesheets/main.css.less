@@ -3,10 +3,11 @@
 @import "superhero/bootswatch";
 
 // Overwrite variables here
-@navbar-height:          60px;
-@navbar-default-color:   @gray-light;
-@navbar-default-bg:      #fff;
-@text-color:             @gray-darker;
+@navbar-height:               60px;
+@navbar-default-color:        @gray-light;
+@navbar-default-bg:           #fff;
+@text-color:                  @gray-darker;
+@page-header-border-color:    @gray-dark;
 
 
 body
@@ -155,7 +156,15 @@ nav
           }//End .list-group-item
         }//End .list-group
     }
-  }//End #events
+  }//End #events  
+}
+
+
+.page-header
+{
+  border-bottom-color: @gray-lighter;
+  margin-top: 20px;
+  font-size: 3em;
 }
 
 
